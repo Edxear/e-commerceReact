@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import cartIcon from '../../assets/cart-icon.svg'; // Asegúrate de tener este icono
+import cartIcon from '../../Assets/cart-icon.svg';
 
 const Navbar = ({ cartItems }) => {
   return (
