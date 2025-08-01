@@ -1,4 +1,3 @@
-import React from 'react';
 import './Container.css';
 
 const Container = ({ welcomeMessage, children }) => {
@@ -13,3 +12,5 @@ const Container = ({ welcomeMessage, children }) => {
 };
 
 export default Container;
+
+
