@@ -1,24 +1,25 @@
 import React from 'react';
-import LogoTienda from '../Assets/LogoTienda';
+import { Link } from 'react-router-dom';
+import LogoTienda from './LogoTienda'; 
 import './Navbar.css';
-import { FaShoppingCart } from 'react-icons/fa';
+import CartWidget from './CartWidget';
 
 const Navbar = ({ cartItems }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <LogoTienda />
+        <Link to="/">
+          <LogoTienda />
+        </Link>
       </div>
 
       <ul className="navbar-links">
-        <li>Inicio</li>
-        <li>Tienda</li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/category/Remeras">Remeras</Link></li>
+        <li><Link to="/category/Buzos">Buzos</Link></li>
         <li>Contacto</li>
-        <li className="navbar-cart">
-          <FaShoppingCart size={20} />
-          {cartItems > 0 && (
-            <span className="cart-count">{cartItems}</span>
-          )}
+        <li>
+          <CartWidget cartItems={cartItems} />
         </li>
       </ul>
     </nav>

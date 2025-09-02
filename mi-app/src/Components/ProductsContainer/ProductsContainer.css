@@ -1,16 +1,11 @@
-.container {
+
+.products-container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-.welcome-message {
-  text-align: center;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-.content {
+.products-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;

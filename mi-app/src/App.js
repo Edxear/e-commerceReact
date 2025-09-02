@@ -1,14 +1,19 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
-import Container from './Components/Container/Container';
+import ItemListContainer from './Components/Catalogo/ItemListContainer';
+import ItemDetailContainer from './Components/Catalogo/ItemDetailContainer';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar cartItems={0} />
-      <Container welcomeMessage="Bienvenido a nuestra tienda online">
-        {/* Productos a futuro */}
-        <p>Próximamente: Catálogo de productos</p>
-      </Container>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h2>Página no encontrada - Error 404</h2>} />
+      </Routes>
     </div>
   );
 }

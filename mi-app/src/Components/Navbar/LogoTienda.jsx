@@ -27,7 +27,6 @@ const LogoTienda = () => (
   <line x1="60" y1="20" x2="60" y2="45" stroke="#fff" strokeWidth="1.5" />
 </g>
 
-
     {/* Datos tienda */}
     <text
       x="110"
